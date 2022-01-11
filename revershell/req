@@ -1,0 +1,19 @@
+after wine installation
+python-msi installer
+https://www.python.org/downloads/release/python-2714/
+
+error
+https://askubuntu.com/questions/136714/how-to-force-wine-into-acting-like-32-bit-windows-on-64-bit-ubuntu
+wine msiexec /i python-2.7.14.msi 
+wine: '/root/.wine' is a 64-bit installation, it cannot be used with a 32-bit wineserver.
+
+solution
+rm ~/.wine -r 
+export WINEARCH=win32
+
+installation
+wine msiexec /i python-2.7.14.msi    
+
+installing pyintsaller 
+wine /root/.wine/drive_c/Python27/python.exe -m pip install pyinstaller
+
